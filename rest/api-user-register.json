@@ -1,0 +1,8 @@
+{
+  "path": "/api/users",
+  "methods": [
+    "POST"
+  ],
+  "query": "api-users-register",
+  "authorized": false
+}

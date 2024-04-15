@@ -1,0 +1,8 @@
+{
+  "path": "/api/vote",
+  "methods": [
+    "POST"
+  ],
+  "query": "api-vote-add",
+  "authorized": false
+}

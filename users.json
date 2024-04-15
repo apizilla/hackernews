@@ -1,0 +1,11 @@
+[
+  {
+    "login": "demo",
+    "password": "demo",
+    "permissions": ["admin"],
+    "id": 1,
+    "otherData": {
+      "test": 1
+    }
+  }
+]

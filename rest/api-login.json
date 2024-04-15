@@ -1,0 +1,8 @@
+{
+  "path": "/api/login",
+  "methods": [
+    "POST"
+  ],
+  "query": "api-login",
+  "authorized": false
+}

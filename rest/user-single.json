@@ -1,0 +1,8 @@
+{
+  "path": "/api/user/{username}",
+  "methods": [
+    "GET"
+  ],
+  "query": "user-single",
+  "authorized": false
+}

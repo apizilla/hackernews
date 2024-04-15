@@ -1,0 +1,8 @@
+{
+  "path": "/api/vote",
+  "methods": [
+    "DELETE"
+  ],
+  "query": "api-vote-delete",
+  "authorized": false
+}

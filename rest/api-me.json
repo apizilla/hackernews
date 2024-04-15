@@ -1,0 +1,8 @@
+{
+  "path": "/api/me",
+  "methods": [
+    "GET"
+  ],
+  "query": "api-me",
+  "authorized": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hacker-news-sql",
+  "type": "sql",
+  "driver": "mysql",
+  "uri": "root:root@tcp(localhost:3306)/hackernews?parseTime=true",
+  "maxOpenConnections": 100,
+  "connectionMaxLifetimeSec": 100,
+  "maxIdleConnections": 30,
+  "connectionMaxIdleTimeSec": 100
+}

@@ -1,0 +1,8 @@
+{
+  "path": "/api/comments",
+  "methods": [
+    "POST"
+  ],
+  "query": "api-comments-new",
+  "authorized": false
+}

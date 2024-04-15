@@ -1,0 +1,8 @@
+{
+  "path": "/api/news",
+  "methods": [
+    "GET"
+  ],
+  "query": "news-list-paginated",
+  "authorized": false
+}

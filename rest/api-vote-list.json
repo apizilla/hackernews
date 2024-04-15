@@ -1,0 +1,8 @@
+{
+  "path": "/api/vote",
+  "methods": [
+    "GET"
+  ],
+  "query": "api-vote-list-query-builder",
+  "authorized": false
+}

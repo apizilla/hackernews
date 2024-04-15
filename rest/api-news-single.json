@@ -1,0 +1,8 @@
+{
+  "path": "/api/news/{id}",
+  "methods": [
+    "GET"
+  ],
+  "query": "api-news-single",
+  "authorized": false
+}
