@@ -1,0 +1,20 @@
+{
+  "type": "javascript",
+  "id": "api-users-register",
+  "file": "api-user-register.js",
+  "public": true,
+  "params": [
+    {
+      "name": "username",
+      "required": true
+    },
+    {
+      "name": "email",
+      "required": false
+    },
+    {
+      "name": "password",
+      "required": true
+    }
+  ]
+}

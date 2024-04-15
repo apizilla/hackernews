@@ -1,0 +1,37 @@
+{
+  "type": "sql-builder",
+  "id": "comments-query-builder",
+  "connection": "hacker-news-sql",
+  "file": "comments-query-builder.js",
+  "public": true,
+  "params": [
+    {
+      "name": "type",
+      "required": false,
+      "default": "news"
+    },
+    {
+      "name": "username",
+      "required": false
+    },
+    {
+      "name": "news",
+      "required": false
+    },
+    {
+      "name": "limit",
+      "required": true,
+      "default": 100
+    },
+    {
+      "name": "page",
+      "required": true,
+      "default": 1
+    },
+    {
+      "name": "paginated",
+      "required": true,
+      "default": true
+    }
+  ]
+}

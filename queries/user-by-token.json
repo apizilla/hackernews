@@ -1,0 +1,14 @@
+{
+  "type": "sql-select",
+  "id": "user-by-token",
+  "connection": "hacker-news-sql",
+  "query": "SELECT user.* FROM user where current_token = :token",
+  "resultType": "single",
+  "public": false,
+  "params": [
+    {
+      "name": "token",
+      "required": true
+    }
+  ]
+}

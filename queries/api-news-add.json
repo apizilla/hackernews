@@ -1,0 +1,28 @@
+{
+  "type": "javascript",
+  "id": "api-news-add",
+  "file": "api-news-add.js",
+  "public": true,
+  "params": [
+    {
+      "name": "type",
+      "required": true
+    },
+    {
+      "name": "title",
+      "required": true
+    },
+    {
+      "name": "url",
+      "required": false
+    },
+    {
+      "name": "description",
+      "required": false
+    },
+    {
+      "name": "token",
+      "required": true
+    }
+  ]
+}

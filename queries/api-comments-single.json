@@ -1,0 +1,12 @@
+{
+  "type": "javascript",
+  "id": "api-comments-single",
+  "file": "api-comment-single.js",
+  "public": true,
+  "params": [
+    {
+      "name": "id",
+      "required": true
+    }
+  ]
+}

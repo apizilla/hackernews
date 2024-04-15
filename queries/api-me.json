@@ -1,0 +1,13 @@
+{
+  "type": "sql-select",
+  "id": "api-me",
+  "connection": "hacker-news-sql",
+  "query": "SELECT id, username, created_at as createdAt, last_login_at as lastLoginAt FROM user where current_token = :token",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "token",
+      "required": true
+    }
+  ]
+}

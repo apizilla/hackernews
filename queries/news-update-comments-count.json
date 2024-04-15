@@ -1,0 +1,19 @@
+{
+  "type": "sql-update",
+  "id": "news-update-comments-count",
+  "connection": "hacker-news-sql",
+  "table": "news",
+  "whereCondition": "`id` = :id",
+  "params": [
+    {
+      "column": "comments_count",
+      "name": "commentsCount",
+      "required": true
+    },
+    {
+      "name": "id",
+      "column": "id",
+      "required": true
+    }
+  ]
+}

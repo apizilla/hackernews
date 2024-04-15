@@ -1,0 +1,27 @@
+{
+  "type": "javascript",
+  "id": "api-vote-add",
+  "file": "api-user-content-rel-add.js",
+  "public": true,
+  "params": [
+    {
+      "name": "token",
+      "required": true
+    },
+    {
+      "name": "commentId",
+      "required": false,
+      "default": 0
+    },
+    {
+      "name": "newsId",
+      "required": true,
+      "default": 0
+    },
+    {
+      "name": "type",
+      "required": true,
+      "default": "favourite"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "sql-select",
+  "id": "comments-count-by-news",
+  "connection": "hacker-news-sql",
+  "query": "SELECT count(id) as c FROM comment where news_id = :newsId",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "newsId",
+      "required": true
+    }
+  ]
+}

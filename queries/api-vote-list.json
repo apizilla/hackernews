@@ -1,0 +1,22 @@
+{
+  "type": "sql-builder",
+  "id": "api-vote-list-query-builder",
+  "connection": "hacker-news-sql",
+  "file": "api-vote-list-query-builder.js",
+  "public": true,
+  "params": [
+    {
+      "name": "newsId",
+      "required": true
+    },
+    {
+      "name": "comments",
+      "required": true,
+      "default": 0
+    },
+    {
+      "name": "token",
+      "required": true
+    }
+  ]
+}

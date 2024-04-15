@@ -1,0 +1,16 @@
+{
+  "type": "javascript",
+  "id": "api-login",
+  "file": "api-login.js",
+  "public": true,
+  "params": [
+    {
+      "name": "username",
+      "required": true
+    },
+    {
+      "name": "password",
+      "required": true
+    }
+  ]
+}

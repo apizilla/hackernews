@@ -1,0 +1,24 @@
+{
+  "type": "javascript",
+  "id": "api-comments-new",
+  "file": "api-comments-new.js",
+  "public": true,
+  "params": [
+    {
+      "name": "newsId",
+      "required": true
+    },
+    {
+      "name": "token",
+      "required": true
+    },
+    {
+      "name": "parentCommentId",
+      "required": false
+    },
+    {
+      "name": "comment",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "sql-insert",
+  "id": "comments-insert",
+  "connection": "hacker-news-sql",
+  "table": "comment",
+  "selectAfterInsert": "SELECT * FROM `comment` where id = :lastInsertId",
+  "public": false,
+  "params": [
+    {
+      "columnName": "user_id",
+      "name": "userId",
+      "required": true
+    },
+    {
+      "columnName": "news_id",
+      "name": "newsId",
+      "required": true
+    },
+    {
+      "columnName": "parent_comment_id",
+      "name": "parentCommentId",
+      "required": false
+    },
+    {
+      "columnName": "comment",
+      "name": "comment",
+      "required": true
+    },
+    {
+      "columnName": "created_at",
+      "name": "createdAt",
+      "sqlValue": "now()"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "sql-insert",
+  "id": "user-content-rel-insert-insert",
+  "connection": "hacker-news-sql",
+  "table": "user_content_rel",
+  "selectAfterInsert": "SELECT * FROM `user_content_rel` where id = :lastInsertId",
+  "public": false,
+  "params": [
+    {
+      "columnName": "user_id",
+      "name": "userId",
+      "required": true
+    },
+    {
+      "columnName": "created_at",
+      "name": "createdAt",
+      "sqlValue": "now()"
+    },
+    {
+      "columnName": "news_id",
+      "name": "newsId",
+      "required": false
+    },
+    {
+      "columnName": "comment_id",
+      "name": "commentId",
+      "required": false
+    },
+    {
+      "columnName": "report",
+      "name": "report",
+      "default": ""
+    },
+    {
+      "columnName": "vote",
+      "name": "vote",
+      "default": 0
+    }
+  ]
+}

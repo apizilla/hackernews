@@ -1,0 +1,13 @@
+{
+  "type": "sql-select",
+  "id": "comments-get-by-id",
+  "connection": "hacker-news-sql",
+  "query": "SELECT * FROM comment where id = :id",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "id",
+      "required": true
+    }
+  ]
+}

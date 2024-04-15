@@ -1,0 +1,24 @@
+{
+  "type": "sql-update",
+  "id": "user-login-success",
+  "connection": "hacker-news-sql",
+  "table": "user",
+  "whereCondition": "`id` = :id",
+  "params": [
+    {
+      "name": "id",
+      "required": true,
+      "column": "id"
+    },
+    {
+      "name": "currentToken",
+      "required": true,
+      "column": "current_token"
+    },
+    {
+      "name": "lastLoginAt",
+      "column": "last_login_at",
+      "sqlValue": "NOW()"
+    }
+  ]
+}

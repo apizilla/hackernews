@@ -1,0 +1,27 @@
+{
+  "type": "sql-select",
+  "id": "user-content-rel-fetch-single-comment-by-token",
+  "connection": "hacker-news-sql",
+  "query": "SELECT ucr.* FROM user_content_rel ucr join user u on ucr.user_id = u.id where u.current_token = :token and ucr.type = :type and ucr.comment_id = :commentId",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "token",
+      "required": true
+    },
+    {
+      "name": "type",
+      "required": true
+    },
+    {
+      "name": "newsId",
+      "required": true,
+      "default": 0
+    },
+    {
+      "name": "commentId",
+      "required": true,
+      "default": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "sql-select",
+  "id": "user-register-select",
+  "connection": "hacker-news-sql",
+  "query": "SELECT user.id, user.username, user.email FROM user where username = :username or email = :email limit 1",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "email",
+      "required": true
+    },
+    {
+      "name": "username",
+      "required": true
+    }
+  ]
+}

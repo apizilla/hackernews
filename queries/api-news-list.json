@@ -1,0 +1,31 @@
+{
+  "type": "sql-builder",
+  "id": "api-news-list",
+  "connection": "hacker-news-sql",
+  "file": "api-news-list-query-builder.js",
+  "public": true,
+  "params": [
+    {
+      "name": "limit",
+      "default": 10,
+      "required": true
+    },
+    {
+      "name": "page",
+      "default": 1,
+      "required": true
+    },
+    {
+      "name": "type",
+      "required": false
+    },
+    {
+      "name": "votedByUsername",
+      "required": false
+    },
+    {
+      "name": "addedByUsername",
+      "required": false
+    }
+  ]
+}

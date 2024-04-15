@@ -1,0 +1,13 @@
+{
+  "type": "sql-select",
+  "id": "news-single-select",
+  "connection": "hacker-news-sql",
+  "query": "SELECT u.username, n.* FROM news n left join user u on n.user_id=u.id where n.id = :id",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "id",
+      "required": true
+    }
+  ]
+}

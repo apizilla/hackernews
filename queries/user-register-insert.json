@@ -1,0 +1,40 @@
+{
+  "type": "sql-insert",
+  "id": "user-register-insert",
+  "connection": "hacker-news-sql",
+  "table": "user",
+  "selectAfterInsert": "SELECT * FROM `user` where id = :lastInsertId",
+  "public": false,
+  "params": [
+    {
+      "columnName": "created_at",
+      "name": "createdAt",
+      "sqlValue": "now()"
+    },
+    {
+      "columnName": "username",
+      "required": true,
+      "name": "username"
+    },
+    {
+      "columnName": "email",
+      "required": false,
+      "name": "email"
+    },
+    {
+      "columnName": "password",
+      "required": true,
+      "name": "password"
+    },
+    {
+      "columnName": "salt",
+      "required": true,
+      "name": "salt"
+    },
+    {
+      "columnName": "current_token",
+      "required": true,
+      "name": "currentToken"
+    }
+  ]
+}

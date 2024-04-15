@@ -1,0 +1,13 @@
+{
+  "type": "sql-select",
+  "id": "user-login-select",
+  "connection": "hacker-news-sql",
+  "query": "SELECT user.* FROM user where username = :username",
+  "resultType": "single",
+  "params": [
+    {
+      "name": "username",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "type": "sql-insert",
+  "id": "news-insert",
+  "connection": "hacker-news-sql",
+  "table": "news",
+  "selectAfterInsert": "SELECT * FROM `news` where id = :lastInsertId",
+  "public": true,
+  "params": [
+    {
+      "columnName": "user_id",
+      "name": "userId",
+      "required": true
+    },
+    {
+      "columnName": "type",
+      "name": "type",
+      "required": true
+    },
+    {
+      "columnName": "title",
+      "name": "title",
+      "required": true
+    },
+    {
+      "columnName": "url",
+      "name": "url",
+      "column":  "url",
+      "required": false
+    },
+    {
+      "columnName": "description",
+      "name": "description",
+      "required": false
+    },
+    {
+      "columnName": "created_at",
+      "name": "createdAt",
+      "sqlValue": "now()"
+    },
+    {
+      "columnName": "votes",
+      "name": "votes",
+      "required": true,
+      "default": 0
+    },
+    {
+      "columnName": "news_order",
+      "name": "newsOrder",
+      "required": true,
+      "default": 100
+    }
+  ]
+}

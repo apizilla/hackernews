@@ -1,0 +1,16 @@
+{
+  "type": "javascript",
+  "id": "api-news-single",
+  "file": "api-news-single.js",
+  "public": true,
+  "params": [
+    {
+      "name": "id",
+      "required": true
+    },
+    {
+      "name": "token",
+      "required": false
+    }
+  ]
+}
