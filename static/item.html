@@ -1,0 +1,388 @@
+<html lang="en" op="item">
+<head>
+    <meta content="origin" name="referrer">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="news.css?rWwWpTdv3LlnGxQFIsiO" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <title id="headTitle">TITLE</title>
+</head>
+<body>
+
+
+<template id="singleComment">
+    <tr class='athing comtr commentId'>
+        <td>
+            <table border='0'>
+                <tr>
+                    <td class='ind' indent='0'>
+                        <img height="1" class="commentIndent" src="/s.gif" width="0">
+                    </td>
+                    <td class="votelinks" valign="top">
+                        <center>
+                            <a>
+                                <div class='votearrow voteItem voteCommentById' id="commentId" data-comment-id=""
+                                     title='upvote'></div>
+                            </a>
+                        </center>
+                    </td>
+                    <td class="default">
+                        <div style="margin-top:2px; margin-bottom:-10px;">
+                            <span class="comhead">
+                                    <a class="hnuser userLink" href="user?id=example">example</a>
+                                <span class="age commentDateTime" title="XXXX-XX-XXTXX:XX:XX">
+                                    <a>1 hour ago</a>
+                                </span>
+                                <span></span>
+                                <span class='navs'>
+                                    <a class="togg clicky">[–]</a>
+                                    <span class="onstory"></span>
+                                </span>
+                            </span>
+                        </div>
+                        <br>
+                        <div class="comment">
+                            <span class="commtext c00 commentContent">
+                            COMMENT CONTENT
+                            </span>
+                            <div class='reply'>
+                                <p>
+                                    <font size="1">
+                                        <u>
+                                            <a class="commentReply" rel="nofollow">reply</a>
+                                        </u>
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+</template>
+
+
+<center>
+    <table bgcolor="#f6f6ef" border="0" cellpadding="0" cellspacing="0" id="hnmain" width="85%">
+        <tr>
+            <td bgcolor="#ff6600">
+                <table border="0" cellpadding="0" cellspacing="0" style="padding:2px" width="100%">
+                    <tr>
+                        <td style="width:18px;padding-right:4px">
+                            <a href="/">
+                                <img height="18" src="/y18.svg" style="border:1px white solid; display:block"
+                                     width="18">
+                            </a>
+                        </td>
+                        <td style="line-height:12pt; height:10px;">
+                            <span class="pagetop">
+                                <b class="hnname">
+                                    <a href="/index.html">Hacker News</a>
+                                </b>
+                                <a href="/index.html?type=new">new</a> |
+                                <a href="/api/comments?order=new&page=1&limit=100" target="_blank">comments</a> |
+                                <a href="/index.html?type=ask">ask</a> |
+                                <a href="/index.html?type=show">show</a> |
+                                <a href="/index.html?type=job">jobs</a> |
+                                <a href="/submit.html">submit</a>
+                            </span>
+                        </td>
+                        <td style="text-align:right;padding-right:4px;">
+                            <span id="pageTopLoginLink" class="pagetop pageTopLoginLink">
+                              <a href="/login.html">login</a>
+                            </span>
+
+                            <span class="pagetop pageTopUserData" id="pageTopUserData">
+                                <a href="user?id=sample_user" id='me'>sample_user</a>
+                                (<span id='karma'>0</span>)
+<!--                               | <a href="#" id='logout' rel='nofollow'>logout</a>-->
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr class="pageContentTitleTitle" id="pagespace" style="height:10px"
+            title="Default Title"></tr>
+        <tr>
+            <td>
+                <table border="0" class="fatitem">
+                    <tr class='athing'>
+                        <td align="right" class="title" valign="top">
+                            <span class="rank"></span>
+                        </td>
+                        <td class="votelinks" valign="top">
+                            <center>
+                                <a class='clicky' id=''>
+                                    <div class='votearrow voteItem voteNews' title='upvote'></div>
+                                </a>
+                            </center>
+                        </td>
+                        <td class="title">
+                            <span class="titleline">
+                                <a class="newsTitleLine newsUrl" href="https://example.com" rel="noreferrer">
+                                    NEWS TITLE
+                                </a>
+                                <span class="sitebit comhead">
+                                    (<a class="newsFromDomain" href="https://example.com">
+                                        <span class="sitestr newsDomain">example.com</span>
+                                    </a>)
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td class="subtext">
+                            <span class="subline">
+									<span class="score newsScore">XX points</span> by
+                                    <a class="hnuser newsCreatedBy" href="#">####</a>
+                                <span class="age" title="2000-00-00T00:00:00">
+                                    <a class="newsItemLink" href="#">12 hours ago</a>
+                                </span>
+                                <span id="###"></span> |
+                                <a href="##">hide</a> |
+                                <a class="hnpast" href="https://example.com">past</a> |
+                                <a href="##">favorite</a> |
+                                <a class="newsCommentsCount" href="#">0&nbsp;comments</a>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr style="height:2px"></tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>
+                            <div class="toptext newsDescription"></div>
+                        </td>
+                    </tr>
+
+                    <tr style="height:10px"></tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>
+                            <form action="comment" method="post">
+                                <textarea
+                                        class="newsCommentContent"
+                                        cols="80"
+                                        name="text"
+                                        rows="8"
+                                        wrap="virtual"></textarea>
+                                <br>
+                                <br>
+                                <input id="sendComment" type="button" value="add comment">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+
+                <!--             COMMENT TREE   -->
+
+                <table border="0" class='comment-tree' id="commentsTable">
+                </table>
+                <br>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img height="10" src="s.gif" width="0">
+                <table cellpadding="1" cellspacing="0" width="100%">
+                    <tr>
+                        <td bgcolor="#ff6600"></td>
+                    </tr>
+                </table>
+                <br>
+                <center>
+                    <span class="yclinks">
+                        <a href="#">Guidelines</a> |
+                        <a href="#">FAQ</a> |
+                        <a href="lists">Lists</a> |
+                        <a href="#">API</a> |
+                        <a href="#">Security</a> |
+                        <a href="#">Legal</a> |
+                        <a href="#">Apply to YC</a> |
+                        <a href="#">Contact</a>
+                    </span>
+                    <br>
+                    <br>
+                    <form action="#" method="get">Search:
+                        <input autocapitalize="off" autocomplete="false" autocorrect="off" name="q" size="17"
+                               spellcheck="false" type="text">
+                    </form>
+                </center>
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+<script src='hn.js?rWwWpTdv3LlnGxQFIsiO' type='text/javascript'></script>
+<script src='js.js?4FFLbespwExGMwWLzR3n' type='text/javascript'></script>
+<script type="application/javascript">
+    const loginLink = document.getElementById("pageTopLoginLink")
+    const meData = document.getElementById("me")
+    const userData = document.getElementById("pageTopUserData")
+
+    const singleCommentTemplate = document.getElementById("singleComment");
+    const commentsTable = document.getElementById("commentsTable");
+    const urlParams = new URLSearchParams(window.location.search);
+    let newsId = parseInt(urlParams.get('id'));
+    let commentId = parseInt(urlParams.get('comment'));
+    if ((newsId < 1 || isNaN(newsId)) && commentId < 1) {
+        window.location.href = "/index.html"
+    }
+
+    checkAuth(false).then(data => {
+        if (data.json.id === undefined || data.json.id === null) {
+            userData.style.display = "none";
+        } else {
+            loginLink.style.display = "none";
+            meData.textContent = data.json.username;
+            meData.setAttribute("href", "/index.html?username=" + data.json.username);
+        }
+    })
+
+    function renderComments(template, comments, depth = 0) {
+        comments.forEach(comment => {
+            let clone = template.content.cloneNode(true);
+            clone.querySelector('.commentContent').textContent = comment.comment;
+            clone.querySelector('.commentId').setAttribute("id", comment.id);
+            clone.querySelector('.commentIndent').setAttribute("width", 40 * depth);
+            clone.querySelector('.userLink').textContent = comment.username;
+            clone.querySelector('.userLink').setAttribute("href", "user.html?user=" + comment.username);
+            clone.querySelector('.commentDateTime').setAttribute("title", comment.created_at.datetime);
+            clone.querySelector('.commentReply').setAttribute("href", "/item.html?comment=" + comment.id);
+            clone.querySelector('.voteItem').setAttribute("data-comment-id", comment.id);
+            clone.querySelector('.voteItem').setAttribute("data-news-id", comment.news_id);
+            clone.querySelector('.voteCommentById').setAttribute("id", "voteComment" + comment.id);
+            clone.querySelector('.voteItem').addEventListener("click", function (voteEvent) {
+                let commentId = voteEvent.currentTarget.dataset.commentId;
+                let newsId = voteEvent.currentTarget.dataset.newsId;
+
+                vote(newsId, commentId).then(data => {
+                    if (data.ok) {
+                        renderCommentVotes([commentId])
+                        console.log(data.json)
+                    } else {
+                        alert(data.json.msg)
+                    }
+
+                    return data
+                }).catch(error => {
+                    console.log("err", error)
+                    alert("Something went wrong")
+                })
+            });
+
+            commentsTable.append(clone);
+
+            if (comment.children.length > 0) {
+                renderComments(template, comment.children, 1 + depth)
+            }
+        })
+    }
+
+    function renderCommentVotes(commentIds) {
+        commentIds.forEach(id => {
+            document.querySelector("#voteComment" + id).classList.add("nosee")
+        })
+    }
+
+    function renderNewsVote(newsIds) {
+        if (newsIds.length > 0) {
+            document.querySelector(".voteNews").classList.add("nosee")
+        }
+    }
+
+    function processSingleNews(json) {
+        document.querySelector('#headTitle').textContent = json.news.title + " | Hacker News";
+        document.querySelector('.newsDescription').textContent = json.news.description;
+        document.querySelector('.newsCommentsCount').textContent = json.news.comments_count + " comments";
+        document.querySelector('.newsTitleLine').textContent = json.news.title;
+        document.querySelector('.newsCreatedBy').textContent = json.news.username;
+        document.querySelector('.newsDomain').textContent = json.news.domain;
+        document.querySelector('.newsScore').textContent = json.news.votes + " points";
+        document.querySelector('.pageContentTitleTitle').setAttribute("title", json.news.title);
+        document.querySelector('.newsUrl').setAttribute("href", json.news.url);
+        document.querySelector('.newsFromDomain').setAttribute("href", "/news.html?from=" + json.news.domain);
+        document.querySelector('.newsCreatedBy').setAttribute("href", "/user.html?username=" + json.news.username);
+        document.querySelector('.newsItemLink').setAttribute("href", "/item.html?id=" + json.news.id);
+        document.querySelector('.newsCommentsCount').setAttribute("href", "/item.html?id=" + json.news.id);
+        document.querySelector('.voteItem').setAttribute("data-news-id", json.news.id);
+        document.querySelector('.voteItem').addEventListener("click", function (voteEvent) {
+
+            vote(json.news.id, null).then(data => {
+                if (data.ok) {
+                    console.log(data.json)
+                    renderNewsVote([data.news_id])
+                } else {
+                    alert(data.json.msg)
+                }
+
+                return data
+            }).catch(error => {
+                console.log("err", error)
+                alert("Something went wrong")
+            });
+
+        });
+    }
+
+    if (commentId > 0) {
+        fetchByComment(commentId).then(data => {
+            if (data.ok) {
+                console.log(data.json)
+                processSingleNews(data.json)
+                renderComments(singleCommentTemplate, [data.json.comment], 0)
+                if (getCookie('token') !== null) {
+                    fetchVotes(data.json.news.id, 1).then(result => {
+                        console.log("fetch votes result", result)
+                        renderCommentVotes(result.commentIds)
+                        renderNewsVote(result.newsIds)
+                    })
+                }
+                newsId = data.json.news.id;
+
+            } else {
+                alert(data.json.msg)
+            }
+        }).catch(error => {
+            console.log("err", error)
+            alert("Something went wrong")
+        });
+    } else {
+        fetchSingleNews(newsId).then(data => {
+            if (data.ok) {
+                console.log(data.json)
+                processSingleNews(data.json)
+                renderComments(singleCommentTemplate, data.json.comments, 0)
+                if (getCookie('token') !== null) {
+                    fetchVotes(data.json.news.id, 1).then(result => {
+                        console.log("fetch votes result", result)
+                        renderCommentVotes(result.commentIds)
+                        renderNewsVote(result.newsIds)
+                    })
+                }
+            } else {
+                alert(data.json.msg)
+            }
+        }).catch(error => {
+            console.log("err", error)
+            alert("Something went wrong")
+        })
+    }
+
+    document.querySelector('#sendComment').addEventListener('click', function () {
+        addComment(
+            newsId,
+            commentId,
+            document.querySelector(".newsCommentContent").value
+        ).then(() => {
+            location.reload();
+        });
+    })
+</script>
+</html>

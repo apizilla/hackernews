@@ -1,0 +1,196 @@
+<html lang="en" op="news">
+<head>
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="news.css?4FFLbespwExGMwWLzR3n">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss">
+    <title>Hacker News</title></head>
+<body>
+
+<template id="singleItem">
+    <tr class='athing'>
+        <td align="right" valign="top" class="title"><span class="rank rowRank">89.</span></td>
+        <td valign="top" class="votelinks">
+            <center>
+                <a class="rowVote" data-news="">
+                    <div class='votearrow' title='upvote'></div>
+                </a>
+            </center>
+        </td>
+        <td class="title"><span class="titleline">
+            <a
+                    class="rowUrl rowTitle"
+                    href="https://example.com"
+                    rel="noreferrer">EXAMPLE TITLE</a>
+            <span class="sitebit comhead"> (<a class="rowFromDomain" href="index.html?site=example.com">
+                <span class="sitestr rowDomain">example.com</span></a>)</span>
+        </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td class="subtext"><span class="subline">
+            <span class="score rowVotes">222 points</span> by
+            <a href="/index.html?username=EXAMPLE_USERNAME" class="hnuser rowUsername">EXAMPLE_USERNAME</a>
+            <span class="age rowAge" title="2000-00-00T00:00:00">
+            <a href="#" class="rowViewSingleItem rowTimeCounter">1 day ago</a>
+            </span>
+            <span></span> |
+            <a href="hide?id=38590078&amp;goto=news%3Fp%3D3">hide</a> |
+            <a class="rowViewSingleItem2 rowCommentsCount" href="#">XX&nbsp;comments</a>
+        </span>
+        </td>
+    </tr>
+    <tr class="spacer" style="height:5px"></tr>
+    <!--    END-->
+</template>
+
+<template id="moreSection">
+    <tr class="morespace" style="height:10px"></tr>
+    <tr>
+        <td colspan="2"></td>
+        <td class='title'><a href="" class='morelink tableMoreLink' rel='next'>More</a></td>
+    </tr>
+</template>
+
+<center>
+    <table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
+        <tr>
+            <td bgcolor="#ff6600">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
+                    <tr>
+                        <td style="width:18px;padding-right:4px">
+                            <a href="/">
+                                <img src="/y18.svg" width="18" height="18" style="border:1px white solid; display:block">
+                            </a>
+                        </td>
+                        <td style="line-height:12pt; height:10px;">
+                            <span class="pagetop">
+                                <b class="hnname">
+                                    <a href="/index.html">Hacker News</a>
+                                </b>
+                                <a href="/index.html?type=new">new</a> |
+                                <a href="/api/comments?order=new&page=1&limit=100" target="_blank">comments</a> |
+                                <a href="/index.html?type=ask">ask</a> |
+                                <a href="/index.html?type=show">show</a> |
+                                <a href="/index.html?type=job">jobs</a> |
+                                <a href="/submit.html">submit</a>
+                            </span>
+                        </td>
+                        <td style="text-align:right;padding-right:4px;">
+                            <span id="pageTopLoginLink" class="pagetop pageTopLoginLink">
+                              <a href="/login.html">login</a>
+                            </span>
+
+                            <span class="pagetop pageTopUserData" id="pageTopUserData">
+                                <a href="user?id=sample_user" id='me'>sample_user</a>
+                                (<span id='karma'>0</span>)
+<!--                               | <a href="#" id='logout' rel='nofollow'>logout</a>-->
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr id="pagespace" title="" style="height:10px"></tr>
+        <tr>
+            <td>
+                <table id="rowsContainer" border="0" cellpadding="0" cellspacing="0">
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="s.gif" height="10" width="0">
+                <table width="100%" cellspacing="0" cellpadding="1">
+                    <tr>
+                        <td bgcolor="#ff6600"></td>
+                    </tr>
+                </table>
+                <br>
+                <center><span class="yclinks"><a href="#">Guidelines</a> | <a
+                        href="#">FAQ</a> | <a href="#">Lists</a> | <a
+                        href="#">API</a> | <a href="#">Security</a> | <a
+                        href="#">Legal</a> | <a
+                        href="#">Apply to YC</a> | <a href="#">Contact</a></span><br><br>
+                    <form method="get" action="#">Search: <input type="text" name="q" size="17"
+                                                                 autocorrect="off" spellcheck="false"
+                                                                 autocapitalize="off"
+                                                                 autocomplete="false"></form>
+                </center>
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+<script type='text/javascript' src='hn.js?4FFLbespwExGMwWLzR3n'></script>
+<script type='text/javascript' src='js.js?4FFLbespwExGMwWLzR3n'></script>
+
+<script type="application/javascript">
+
+    const loginLink = document.getElementById("pageTopLoginLink")
+    const meData = document.getElementById("me")
+    const userData = document.getElementById("pageTopUserData")
+    const moreSection = document.getElementById("moreSection")
+    const firstTableRow = document.getElementById("rowsContainer")
+    const template = document.getElementById("singleItem");
+    const urlParams = new URLSearchParams(window.location.search);
+    let newsType = urlParams.get('type');
+    let addedByUsername = urlParams.get('username');
+    let page = parseInt(urlParams.get('page'));
+    if (page < 1 || isNaN(page)) {
+        page = 1;
+    }
+
+    function processRows(results) {
+        results.forEach(row => {
+            let clone = template.content.cloneNode(true);
+            clone.querySelector('.rowTitle').textContent = row.title;
+            clone.querySelector('.rowViewSingleItem').setAttribute("href", "item.html?id=" + row.id);
+            clone.querySelector('.rowViewSingleItem2').setAttribute("href", "item.html?id=" + row.id);
+            clone.querySelector('.rowTimeCounter').textContent = row.created_at.datetime;
+            clone.querySelector('.rowFromDomain').setAttribute("href", "index.html?from=" + row.domain);
+            clone.querySelector('.rowCommentsCount').textContent = row.comments_count + " comments";
+            clone.querySelector('.rowAge').setAttribute("title", row.created_at.datetime);
+            clone.querySelector('.rowUsername').textContent = row.username;
+            clone.querySelector('.rowUsername').setAttribute("href", "user.html?username=" + row.username);
+            clone.querySelector('.rowDomain').textContent = row.domain;
+            clone.querySelector('.rowVotes').textContent = row.votes;
+            clone.querySelector('.rowUrl').setAttribute("href", row.url);
+            // clone.querySelector('.rowInternalUrl').setAttribute("href", row.url);
+            clone.querySelector('.rowVote').dataset.news = row.id;
+            clone.querySelector('.rowRank').textContent = row.news_order + ".";
+            firstTableRow.append(clone);
+        })
+
+        const moreSectionClone = moreSection.content.cloneNode(true)
+        moreSectionClone.querySelector('.tableMoreLink').setAttribute("href", "index.html?page=" + (page + 1))
+
+        firstTableRow.append(moreSectionClone)
+    }
+
+    fetchNews(page, newsType,addedByUsername).then(data => {
+        if (data.ok) {
+            console.log(data.json)
+            processRows(data.json.results)
+        } else {
+            alert(data.json.msg)
+        }
+    }).catch(error => {
+        console.log("err", error)
+        alert("Something went wrong")
+    });
+
+    checkAuth(false).then(data => {
+        if (data.json.id === undefined || data.json.id === null) {
+            userData.style.display = "none";
+        } else {
+            loginLink.style.display = "none";
+            meData.textContent = data.json.username;
+            meData.setAttribute("href", "/index.html?username=" + data.json.username);
+        }
+    })
+
+</script>
+</html>

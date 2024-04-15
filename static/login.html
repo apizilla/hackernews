@@ -1,0 +1,124 @@
+<html lang="en" class=" arwo idc0_350">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script type="application/javascript" src="/js.js"></script>
+</head>
+<body>
+<b>Login</b><br><br>
+<form>
+    <input type="hidden" name="goto" value="news">
+    <table border="0">
+        <tbody>
+        <tr>
+            <td>username:</td>
+            <td>
+                <input
+                        id="login_username"
+                        type="text"
+                        name="acct"
+                        size="20"
+                        autocorrect="off"
+                        spellcheck="false"
+                        autocapitalize="off"
+                        autofocus="true">
+            </td>
+        </tr>
+        <tr>
+            <td>password:</td>
+            <td>
+                <input id="login_password" type="password" name="pw" size="20"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button" onclick="login()" value="login">
+</form>
+<br><br>
+<b>Create Account</b><br><br>
+<form>
+    <input type="hidden" name="goto" value="news"><input
+        type="hidden" name="creating" value="t">
+    <table border="0">
+        <tbody>
+        <tr>
+            <td>username:</td>
+            <td><input id="register_username" type="text" name="acct" size="20" autocorrect="off" spellcheck="false" autocapitalize="off"></td>
+        </tr>
+        <tr>
+            <td>password:</td>
+            <td><input id="register_password" type="password" name="pw" size="20"></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button" onclick="register()" value="create account">
+</form>
+</body>
+
+<script type="application/javascript">
+    function login() {
+        fetch("/api/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username: document.getElementById("login_username").value,
+                password: document.getElementById("login_password").value
+            }),
+        }).then((response) => {
+            return new Promise((resolve) => response.json()
+                .then((json) => resolve({
+                    status: response.status,
+                    ok: response.ok,
+                    json,
+                }))
+            );
+        }).then(data => {
+            if (data.ok) {
+                setCookie("token", data.json.currentToken)
+                window.location.href = "/index.html"
+            } else {
+                alert(data.json.msg)
+            }
+        }).catch(error => {
+            alert("Something went wrong")
+        });
+    }
+
+    function register() {
+        fetch("/api/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username: document.getElementById("register_username").value,
+                password: document.getElementById("register_password").value
+            }),
+        }).then((response) => {
+            return new Promise((resolve) => response.json()
+                .then((json) => resolve({
+                    status: response.status,
+                    ok: response.ok,
+                    json,
+                }))
+            );
+        }).then(data => {
+            if (data.ok) {
+                setCookie("token", data.json.currentToken)
+                window.location.href = "/index.html"
+            } else {
+                alert(data.json.msg)
+            }
+        }).catch(error => {
+            alert("Something went wrong")
+        });
+    }
+
+</script>
+
+</html>
