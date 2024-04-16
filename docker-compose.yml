@@ -1,6 +1,6 @@
 version: '3.6'
 services:
-  db:
+  db-hackernews:
     environment:
       - MYSQL_DATABASE=hackernews
       - MYSQL_ROOT_PASSWORD=root
@@ -17,7 +17,7 @@ services:
     container_name: apizilla-mysql
     image: mysql
 
-  rabbitmq:
+  rabbitmq-hackernews:
     image: rabbitmq:3-management-alpine
     container_name: 'rabbitmq'
     ports:
@@ -29,15 +29,15 @@ services:
 
   apizilla-hackernews:
     environment:
-      HACKER_NEWS_SQL_DNS: "root:root@tcp(db:3306)/hackernews?parseTime=true"
+      HACKER_NEWS_SQL_DNS: "root:root@tcp(db-hackernews:3306)/hackernews?parseTime=true"
     container_name: hackernews
     ports:
-      - 8080:8080
+      - 13000:8080
     build:
       dockerfile: ./Dockerfile
       context: ./
     volumes:
       - ./:/etc/apizilla/
     depends_on:
-      - rabbitmq
-      - db
+      - rabbitmq-hackernews
+      - db-hackernews
